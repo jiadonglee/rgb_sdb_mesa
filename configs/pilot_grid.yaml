@@ -1,0 +1,79 @@
+# Pilot grid: ~10 representative systems spanning the requested axes.
+# Defaults apply unless overridden per-system.
+defaults:
+  Z: 0.014
+  eta_acc: 0.50          # -> mass_transfer_beta = 0.5
+  mdot_scheme: Ritter
+  wind1: 0.3             # Reimers scaling factor, donor
+  max_age_yr: 1.5e10
+  max_model_number: 300000
+
+systems:
+  # baseline: moderate q, moderate period
+  - id: B0
+    M1: 1.2
+    q: 0.85
+    P_days: 300
+
+  # mass-ratio sweep at baseline
+  - id: B1
+    M1: 1.2
+    q: 0.70
+    P_days: 300
+  - id: B2
+    M1: 1.2
+    q: 0.95
+    P_days: 300
+  - id: B3
+    M1: 1.2
+    q: 0.99
+    P_days: 300
+
+  # accretion-efficiency sweep at baseline
+  - id: B4
+    M1: 1.2
+    q: 0.85
+    P_days: 300
+    eta_acc: 0.0
+  - id: B5
+    M1: 1.2
+    q: 0.85
+    P_days: 300
+    eta_acc: 0.25
+  - id: B6
+    M1: 1.2
+    q: 0.85
+    P_days: 300
+    eta_acc: 1.0
+
+  # period sweep at baseline
+  - id: B7
+    M1: 1.2
+    q: 0.85
+    P_days: 100
+  - id: B8
+    M1: 1.2
+    q: 0.85
+    P_days: 800
+
+  # donor-mass sweep at baseline
+  - id: B9
+    M1: 1.0
+    q: 0.85
+    P_days: 300
+  - id: B10
+    M1: 1.6
+    q: 0.85
+    P_days: 300
+
+  # metallicity sweep at baseline
+  - id: B11
+    M1: 1.2
+    q: 0.85
+    P_days: 300
+    Z: 0.004
+  - id: B12
+    M1: 1.2
+    q: 0.85
+    P_days: 300
+    Z: 0.03

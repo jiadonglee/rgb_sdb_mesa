@@ -1,0 +1,13 @@
+# simulation outputs and MESA artifacts
+runs/
+results/
+figures/
+__pycache__/
+*.pyc
+LOGS*/
+photos/
+*.mod
+*.data
+log[12]
+binary
+FAILED
