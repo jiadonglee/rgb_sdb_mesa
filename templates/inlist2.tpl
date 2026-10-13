@@ -34,6 +34,12 @@
    max_age = {{MAXAGE}}d0
    max_model_number = {{MAXMODEL}}
 
+   ! flash-phase settings (from 1M_pre_ms_to_wd inlist_to_start_he_core_flash;
+   ! must be active from the start — switching mid-run breaks energy conservation)
+   energy_eqn_option = 'eps_grav'
+   use_gold2_tolerances = .true.
+   delta_lgL_He_limit = 0.01d0
+
    ! output
    extra_terminal_output_file = 'log2'
    log_directory = 'LOGS2'
